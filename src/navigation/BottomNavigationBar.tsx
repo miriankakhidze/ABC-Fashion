@@ -1,9 +1,11 @@
+import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import Icon from 'react-native-vector-icons/MaterialIcons';
 import DetailsScreen from "../screens/DetailsScreen";
-import HomeScreen from "../screens/HomeScreen";
+import { HomeScreen } from "../screens/Home";
+import { MainBottomTabParamList } from "./types";
 
-const BottomTab = createBottomTabNavigator();
+const BottomTab = createBottomTabNavigator<MainBottomTabParamList>();
 
 const MainScreen = () => {
     return (

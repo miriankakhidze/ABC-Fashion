@@ -1,8 +1,16 @@
+import { useNavigation } from '@react-navigation/native';
+import { StackNavigationProp } from '@react-navigation/stack';
 import React from 'react'
 import { Button, Text, View } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import { RootStackParamList } from '../navigation/types';
 
-const LoginScreen = ({ navigation }: any) => {
+
+type authScreenProp = StackNavigationProp<RootStackParamList, 'Auth'>;
+
+
+const LoginScreen = () => {
+    const navigation = useNavigation<authScreenProp>();
     return (
         <View>
             <Text>LoginScreen</Text>
