@@ -1,9 +1,8 @@
 import { useNavigation } from '@react-navigation/native';
-import React from 'react'
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import React from 'react';
+import { Image, StyleSheet, Text, View } from 'react-native';
 import { CardList } from '../../components';
 import Button from '../../components/Button/Button';
-import { Colors } from '../../constants/Colors';
 import { ProfileScreenProp } from './ProfileScreen.types';
 
 
@@ -72,7 +71,6 @@ const ProfileScreen = () => {
                     <Button type='outlined' title='EDIT PROFILE' />
                 </View>
             </View>
-            {/* <Text style={styles.header}>More</Text> */}
             <CardList data={menu1} />
             <CardList data={menu2} />
 
