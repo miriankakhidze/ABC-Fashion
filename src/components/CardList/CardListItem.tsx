@@ -1,5 +1,5 @@
 import React, { FC } from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import IonIcon from 'react-native-vector-icons/Ionicons'
 import { CardListItemProps } from './CardList.types'
 
@@ -9,7 +9,7 @@ const CardListItem: FC<CardListItemProps> = ({ icon, title, value, index, length
             <View style={styles.iconContainer}>
                 <IonIcon name={icon} size={24} color="#727c8e" />
             </View>
-            <View style={[styles.middleContainer, { borderBottomWidth: index == length - 1 ? 0 : 1, }]}>
+            <TouchableOpacity style={[styles.middleContainer, { borderBottomWidth: index == length - 1 ? 0 : 1, }]}>
                 <View style={{
                     flex: 5,
                     justifyContent: "space-between",
@@ -24,7 +24,7 @@ const CardListItem: FC<CardListItemProps> = ({ icon, title, value, index, length
                         <IonIcon name="chevron-forward-outline" size={16} color="grey" />
                     </View>
                 </View>
-            </View>
+            </TouchableOpacity>
         </View>
     )
 }

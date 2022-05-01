@@ -7,6 +7,7 @@ import { Colors } from "../constants/Colors";
 import DetailsScreen from "../screens/DetailsScreen";
 import { HomeScreen } from "../screens/Home";
 import { MoreScreen } from "../screens/More";
+import { ProfileScreen } from "../screens/Profile";
 import { MainBottomTabParamList } from "./navigation.types";
 
 const BottomTab = createBottomTabNavigator<MainBottomTabParamList>();
@@ -48,9 +49,12 @@ const MainScreen = () => {
 
             <BottomTab.Screen
                 name="Profile"
-                component={DetailsScreen}
+                component={ProfileScreen}
                 options={{
                     tabBarActiveTintColor: Colors.tabBarActiveTintColor,
+                    headerBackground: () => null,
+                    headerTitle: () => null,
+                    headerRight: () => <HeaderRight />,
                     tabBarIcon: ({ focused, color, size }) => (
                         <Icon name="user" size={24} color={focused ? Colors.tabBarActiveTitleColor : 'grey'} />),
                 }} />

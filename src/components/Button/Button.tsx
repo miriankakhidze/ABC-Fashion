@@ -44,5 +44,28 @@ const styles: any = {
         icon: { position: "absolute", right: 10, width: 30, height: 30, backgroundColor: 'white', borderRadius: 15, justifyContent: "center", alignItems: "center" }
 
     }),
+    outlined: StyleSheet.create({
+        button: {
+            height: 35,
+            flexDirection: "row",
+            textAlign: "center",
+            alignItems: "center",
+            justifyContent: "center",
+
+            borderRadius: 25,
+            borderWidth: 2,
+            borderColor: '#cdd1d8',
+
+            paddingHorizontal: 20,
+
+        },
+        text: {
+            color: Colors.secondary,
+            fontSize: 12,
+            fontWeight: 'bold',
+        },
+        icon: { position: "absolute", right: 10, width: 30, height: 30, backgroundColor: 'white', borderRadius: 15, justifyContent: "center", alignItems: "center" }
+
+    }),
 
 } 

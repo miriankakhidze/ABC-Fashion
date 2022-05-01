@@ -3,8 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native';
 import { CardList } from '../../components';
 import { Colors } from '../../constants/Colors';
-import { MoreScreenProp } from './types';
-
+import { MoreScreenProp } from './MoreScreen.types';
 
 const menu = [
     {
