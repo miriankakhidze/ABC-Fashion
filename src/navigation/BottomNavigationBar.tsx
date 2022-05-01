@@ -1,7 +1,8 @@
-import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import React from "react";
 import Icon from 'react-native-vector-icons/AntDesign';
 import MatIcon from 'react-native-vector-icons/MaterialCommunityIcons';
+import { HeaderRight } from "../components";
 import DetailsScreen from "../screens/DetailsScreen";
 import { HomeScreen } from "../screens/Home";
 import { MainBottomTabParamList } from "./types";
@@ -15,6 +16,13 @@ const MainScreen = () => {
                 name="Home"
                 component={HomeScreen}
                 options={{
+                    headerBackground: () => null,
+                    // headerShown: false,
+                    // headerLeftLabelVisible: false,
+                    headerTitle: () => null,
+                    // title: "",
+                    // headerLeft: () => null,
+                    headerRight: () => <HeaderRight />,
                     tabBarActiveTintColor: "#ff6969",
                     tabBarIcon: ({ focused, color, size }) => (
                         <Icon name="home" size={24} color={focused ? '#ff6969' : 'grey'} />),
