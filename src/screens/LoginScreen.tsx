@@ -5,7 +5,7 @@ import { Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import { Card, Input } from '../components';
 import Button from '../components/Button/Button';
-import { RootStackParamList } from '../navigation/types';
+import { RootStackParamList } from '../navigation/navigation.types';
 
 
 type authScreenProp = StackNavigationProp<RootStackParamList, 'Auth'>;

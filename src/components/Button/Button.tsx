@@ -1,14 +1,15 @@
 import React, { FC } from 'react'
 import { StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import Icon from 'react-native-vector-icons/MaterialIcons'
-import { ButtonProps } from './types'
+import { Colors } from '../../constants/Colors'
+import { ButtonProps } from './Button.types'
 
 const Button: FC<ButtonProps> = ({ title = 'Button', onPress, icon, type }) => {
     return (
         <TouchableOpacity onPress={onPress} style={styles[type].button}>
             <Text style={styles[type].text}>{title}</Text>
             {icon && <View style={styles[type].icon}>
-                <Icon name={icon} size={24} color="#ff6969" />
+                <Icon name={icon} size={24} color={Colors.primary} />
             </View>}
         </TouchableOpacity>
     )
@@ -24,12 +25,12 @@ const styles: any = {
             textAlign: "center",
             alignItems: "center",
             justifyContent: "center",
-            backgroundColor: '#ff6969',
+            backgroundColor: Colors.primary,
             padding: 10,
             margin: 10,
             borderRadius: 25,
 
-            shadowColor: '#ff6969', // IOS
+            shadowColor: Colors.primary, // IOS
             shadowOffset: { height: 1, width: 1 }, // IOS
             shadowOpacity: 1, // IOS
             shadowRadius: 1, //IOS 
@@ -43,10 +44,5 @@ const styles: any = {
         icon: { position: "absolute", right: 10, width: 30, height: 30, backgroundColor: 'white', borderRadius: 15, justifyContent: "center", alignItems: "center" }
 
     }),
-    primary: StyleSheet.create({
 
-    }),
-    outlined: StyleSheet.create({
-
-    })
 } 

@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import { StyleSheet, Text, View } from 'react-native'
-import { BadgeProps } from './types'
+import { Colors } from '../../constants/Colors'
+import { BadgeProps } from './Badge.types'
 
 const Badge: FC<BadgeProps> = ({ children, value = 0 }) => {
     return (
@@ -18,13 +19,13 @@ const styles = StyleSheet.create({
         width: 15,
         height: 15,
         borderRadius: 10,
-        backgroundColor: '#ff6969',
+        backgroundColor: Colors.primary,
         position: 'absolute',
         bottom: 8,
         left: 2,
         justifyContent: 'center',
         alignItems: 'center',
-        shadowColor: '#ff6969', // IOS
+        shadowColor: Colors.primary, // IOS
         shadowOffset: { height: 1, width: 1 }, // IOS
         shadowOpacity: 1, // IOS
         shadowRadius: 1, //IOS

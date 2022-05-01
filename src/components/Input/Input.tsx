@@ -1,6 +1,7 @@
 import React, { FC } from 'react'
 import { StyleSheet, Text, TextInput, View } from 'react-native'
-import { InputProps } from './types'
+import { Colors } from '../../constants/Colors'
+import { InputProps } from './Input.types'
 
 const Input: FC<InputProps> = ({ icon, label, ...rest }) => {
     return (
@@ -10,7 +11,7 @@ const Input: FC<InputProps> = ({ icon, label, ...rest }) => {
             </View>}
             <View style={{ flex: 1, height: 45 }}>
                 {label && <Text style={styles.label}>{label}</Text>}
-                <TextInput  {...{ ...rest, style: styles.input, selectionColor: "#ff6969" }} />
+                <TextInput  {...{ ...rest, style: styles.input, selectionColor: Colors.primary }} />
             </View>
         </View>
     )

@@ -1,7 +1,6 @@
-import React, { FC, ReactNode } from 'react'
+import React, { FC } from 'react'
 import { StyleSheet, View } from 'react-native'
-import { CardProps } from './types'
-
+import { CardProps } from './Card.types'
 
 const Card: FC<CardProps> = ({ children }) => {
     return (
@@ -15,9 +14,9 @@ export default Card
 
 const styles = StyleSheet.create({
     container: {
+        // flex: 1,
         backgroundColor: '#fff',
         borderRadius: 10,
-        // padding: 20,
         paddingHorizontal: 10,
         paddingVertical: 8,
         marginVertical: 8,

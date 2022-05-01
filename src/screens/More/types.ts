@@ -3,7 +3,7 @@ import { CompositeNavigationProp } from "@react-navigation/native";
 import { StackNavigationProp } from "@react-navigation/stack";
 import { MainBottomTabParamList, RootStackParamList } from "../../navigation/navigation.types";
 
-export type HomeScreenProp = CompositeNavigationProp<
+export type MoreScreenProp = CompositeNavigationProp<
     StackNavigationProp<RootStackParamList, 'Main'>,
-    BottomTabNavigationProp<MainBottomTabParamList, 'Home'>
+    BottomTabNavigationProp<MainBottomTabParamList, 'More'>
 >;

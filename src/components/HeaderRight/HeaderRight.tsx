@@ -2,7 +2,7 @@ import React, { FC } from 'react'
 import { View } from 'react-native'
 import IonIcon from 'react-native-vector-icons/Ionicons'
 import { Badge } from '../Badge'
-import { HeaderRightProps } from './types'
+import { HeaderRightProps } from './HeaderRight.types'
 
 const HeaderRight: FC<HeaderRightProps> = () => {
     return (
