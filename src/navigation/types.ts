@@ -4,6 +4,9 @@ export type RootStackParamList = {
 };
 
 export type MainBottomTabParamList = {
-    Home: undefined;
-    Details: undefined;
+    Home: undefined
+    Search: undefined
+    Cart: undefined
+    Profile: undefined
+    More: undefined
 };

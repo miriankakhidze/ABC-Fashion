@@ -1,6 +1,7 @@
 import React from "react";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
-import Icon from 'react-native-vector-icons/MaterialIcons';
+import Icon from 'react-native-vector-icons/AntDesign';
+import MatIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import DetailsScreen from "../screens/DetailsScreen";
 import { HomeScreen } from "../screens/Home";
 import { MainBottomTabParamList } from "./types";
@@ -14,12 +15,47 @@ const MainScreen = () => {
                 name="Home"
                 component={HomeScreen}
                 options={{
-                    tabBarIcon: ({ color, size }) => (
-                        <Icon name="home" size={30} color="black" />),
+                    tabBarActiveTintColor: "#ff6969",
+                    tabBarIcon: ({ focused, color, size }) => (
+                        <Icon name="home" size={24} color={focused ? '#ff6969' : 'grey'} />),
                 }}
             />
 
-            <BottomTab.Screen name="Details" component={DetailsScreen} />
+            <BottomTab.Screen
+                name="Search"
+                component={DetailsScreen}
+                options={{
+                    tabBarActiveTintColor: "#ff6969",
+                    tabBarIcon: ({ focused, color, size }) => (
+                        <Icon name="search1" size={24} color={focused ? '#ff6969' : 'grey'} />),
+                }} />
+
+            <BottomTab.Screen
+                name="Cart"
+                component={DetailsScreen}
+                options={{
+                    tabBarActiveTintColor: "#ff6969",
+                    tabBarIcon: ({ focused, color, size }) => (
+                        <Icon name="shoppingcart" size={24} color={focused ? '#ff6969' : 'grey'} />),
+                }} />
+
+            <BottomTab.Screen
+                name="Profile"
+                component={DetailsScreen}
+                options={{
+                    tabBarActiveTintColor: "#ff6969",
+                    tabBarIcon: ({ focused, color, size }) => (
+                        <Icon name="user" size={24} color={focused ? '#ff6969' : 'grey'} />),
+                }} />
+
+            <BottomTab.Screen
+                name="More"
+                component={DetailsScreen}
+                options={{
+                    tabBarActiveTintColor: "#ff6969",
+                    tabBarIcon: ({ focused, color, size }) => (
+                        <MatIcon name="menu" size={24} color={focused ? '#ff6969' : 'grey'} />),
+                }} />
         </BottomTab.Navigator>
     )
 }
