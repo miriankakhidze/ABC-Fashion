@@ -5,6 +5,7 @@ import { Text, View } from 'react-native';
 import Icon from 'react-native-vector-icons/AntDesign';
 import { Card, Input } from '../components';
 import Button from '../components/Button/Button';
+import { Colors } from '../constants/Colors';
 import { RootStackParamList } from '../navigation/navigation.types';
 
 
@@ -18,7 +19,7 @@ const LoginScreen = () => {
             flex: 1
         }}>
             <View style={{ marginVertical: 60, alignItems: "center" }}>
-                <Text>ABC Fashion</Text>
+                <Text style={{ color: Colors.secondary }}>ABC Fashion</Text>
             </View>
             <Card>
                 <Input label="USERNAME / EMAIL" icon={<Icon name="user" size={30} color="grey" />} />
@@ -28,7 +29,8 @@ const LoginScreen = () => {
             <Text style={{
                 marginHorizontal: 50,
                 position: "absolute",
-                bottom: 40
+                bottom: 40,
+                color: Colors.secondary,
             }}>Don't have an account? Swipe right to <Text style={{ color: "#ff6969" }}>Create a new account</Text></Text>
         </View>
     )

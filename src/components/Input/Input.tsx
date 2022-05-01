@@ -27,7 +27,9 @@ const styles = StyleSheet.create({
         marginVertical: 8
 
     },
-    label: {},
+    label: {
+        color: Colors.secondary
+    },
     iconContainer: { borderWidth: 0, height: 45, justifyContent: "center", alignItems: "center", marginHorizontal: 12 },
-    input: { borderWidth: 0, width: "100%", height: 35, padding: 0 }
+    input: { borderWidth: 0, width: "100%", height: 35, padding: 0, color: Colors.secondary }
 })
