@@ -1,9 +1,11 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { useNavigation } from "@react-navigation/native";
 import React from "react";
 import Icon from 'react-native-vector-icons/AntDesign';
 import MatIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { HeaderRight } from "../components";
 import { Colors } from "../constants/Colors";
+import { CartScreen } from "../screens/Cart";
 import DetailsScreen from "../screens/DetailsScreen";
 import { HomeScreen } from "../screens/Home";
 import { MoreScreen } from "../screens/More";
@@ -13,6 +15,7 @@ import { MainBottomTabParamList } from "./navigation.types";
 const BottomTab = createBottomTabNavigator<MainBottomTabParamList>();
 
 const MainScreen = () => {
+    const navigation = useNavigation()
     return (
         <BottomTab.Navigator>
             <BottomTab.Screen
@@ -39,9 +42,23 @@ const MainScreen = () => {
 
             <BottomTab.Screen
                 name="Cart"
-                component={DetailsScreen}
+                component={CartScreen}
+
                 options={{
                     tabBarActiveTintColor: Colors.tabBarActiveTintColor,
+                    headerBackground: () => null,
+                    headerLeft: ({ tintColor }) => <Icon.Button
+                        name="left"
+                        backgroundColor={'transparent'}
+                        // selectionColor='transparent'
+                        underlayColor={'transparent'}
+                        size={24}
+                        color={Colors.primary}
+                        onPress={() => { navigation.navigate('Home' as any) }}
+                    />,
+                    headerTitle: () => null,
+                    headerRight: () => <HeaderRight />,
+                    tabBarStyle: { display: 'none' },
                     tabBarIcon: ({ focused, color, size }) => (
                         <Icon name="shoppingcart" size={24} color={focused ? Colors.tabBarActiveTitleColor : 'grey'} />),
                     tabBarBadge: 4
