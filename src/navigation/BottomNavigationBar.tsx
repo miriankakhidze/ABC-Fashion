@@ -1,13 +1,11 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
-import { TextInput } from "react-native";
 import Icon from 'react-native-vector-icons/AntDesign';
 import MatIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { HeaderRight } from "../components";
 import { Colors } from "../constants/Colors";
 import { CartScreen } from "../screens/Cart";
-import DetailsScreen from "../screens/DetailsScreen";
 import { HomeScreen } from "../screens/Home";
 import { MoreScreen } from "../screens/More";
 import { ProfileScreen } from "../screens/Profile";

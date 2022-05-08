@@ -61,26 +61,22 @@ const ItemCard = ({
     )
 }
 
-
 const SearchScreen = () => {
     const navigation = useNavigation<SearchScreenProp>();
 
     return (
         <View style={styles.container}>
             <View style={{
-                // flex: 1,
                 flexDirection: "row",
                 justifyContent: "space-between",
                 paddingHorizontal: 10,
                 paddingVertical: 20,
                 backgroundColor: "white",
-                // flexGrow: 1
             }}>
                 <View>
                     <Icon.Button
                         name="left"
                         backgroundColor={'transparent'}
-                        // selectionColor='transparent'
                         underlayColor={'transparent'}
                         size={24}
                         color={Colors.primary}
@@ -89,22 +85,18 @@ const SearchScreen = () => {
                 </View>
                 <View style={{
                     flex: 1
-                    // width: "100%",
                 }}>
                     <TextInput style={{
-                        // flex: 1,
                         paddingLeft: 25,
                         height: 35,
                         borderRadius: 25,
                         backgroundColor: "#eeeef1",
-                        // width: "100%",
                     }} />
                 </View>
                 <View>
                     <Icon.Button
                         name="filter"
                         backgroundColor={'transparent'}
-                        // selectionColor='transparent'
                         underlayColor={'transparent'}
                         size={24}
                         color={Colors.secondary}
@@ -113,8 +105,7 @@ const SearchScreen = () => {
                 </View>
             </View>
             <View style={{
-                backgroundColor: 'white',
-                // paddingVertical: 8
+                backgroundColor: 'white'
             }}>
                 <FlatList
                     style={{
@@ -126,11 +117,7 @@ const SearchScreen = () => {
                     renderItem={({ item, index }) => <Text style={{ fontSize: 14, textTransform: 'uppercase', marginHorizontal: 8 }}>{item}</Text>}
                 />
             </View>
-            <View style={{
-                // flex: 1,
-                // flexDirection: 'row'
-            }}>
-
+            <View>
                 <FlatList
                     contentContainerStyle={{
                         paddingBottom: 200,
@@ -142,14 +129,6 @@ const SearchScreen = () => {
                     data={DATA}
                     renderItem={({ item }) => <ItemCard {...item} />}
                     keyExtractor={(item) => item.img}
-                // renderItem={({ item: { img, title, price, rating } }) =>
-                //     <View style={styles.item} >
-                //         <Image source={img} style={{ width: 120, height: 200, }} />
-                //         <Text>{title}</Text>
-                //         <Text>{price}</Text>
-                //         <Text>{rating}</Text>
-                //     </View>
-                // }
                 />
             </View>
         </View>
