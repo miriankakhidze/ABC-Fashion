@@ -1,6 +1,7 @@
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { useNavigation } from "@react-navigation/native";
 import React from "react";
+import { TextInput } from "react-native";
 import Icon from 'react-native-vector-icons/AntDesign';
 import MatIcon from 'react-native-vector-icons/MaterialCommunityIcons';
 import { HeaderRight } from "../components";
@@ -10,6 +11,7 @@ import DetailsScreen from "../screens/DetailsScreen";
 import { HomeScreen } from "../screens/Home";
 import { MoreScreen } from "../screens/More";
 import { ProfileScreen } from "../screens/Profile";
+import { SearchScreen } from "../screens/Search";
 import { MainBottomTabParamList } from "./navigation.types";
 
 const BottomTab = createBottomTabNavigator<MainBottomTabParamList>();
@@ -33,8 +35,30 @@ const MainScreen = () => {
 
             <BottomTab.Screen
                 name="Search"
-                component={DetailsScreen}
+                component={SearchScreen}
                 options={{
+                    // headerLeft: ({ tintColor }) => <Icon.Button
+                    //     name="left"
+                    //     backgroundColor={'transparent'}
+                    //     // selectionColor='transparent'
+                    //     underlayColor={'transparent'}
+                    //     size={24}
+                    //     color={Colors.primary}
+                    //     onPress={() => { navigation.navigate('Home' as any) }}
+                    // />,
+                    // headerRight: ({ tintColor }) => <Icon.Button
+                    //     name="filter"
+                    //     backgroundColor={'transparent'}
+                    //     // selectionColor='transparent'
+                    //     underlayColor={'transparent'}
+                    //     size={24}
+                    //     color={Colors.secondary}
+                    //     onPress={() => { navigation.navigate('Home' as any) }}
+                    // />,
+                    // headerTitleAlign: 'center',
+                    // headerTitle: () => <TextInput style={{ backgroundColor: 'grey', width: "100%" }} />,
+                    headerShown: false,
+                    tabBarStyle: { display: 'none' },
                     tabBarActiveTintColor: Colors.tabBarActiveTintColor,
                     tabBarIcon: ({ focused, color, size }) => (
                         <Icon name="search1" size={24} color={focused ? Colors.tabBarActiveTitleColor : 'grey'} />),
