@@ -16,12 +16,9 @@ export default CartList
 const styles = StyleSheet.create({
     container: {
         borderRadius: 10,
-
         paddingHorizontal: 15,
         paddingVertical: 8,
-
         marginVertical: 8,
-
         shadowColor: "#ececec",
         shadowOpacity: 0.10,
         shadowRadius: 5,

@@ -14,7 +14,6 @@ export default Card
 
 const styles = StyleSheet.create({
     container: {
-        // flex: 1,
         backgroundColor: '#fff',
         borderRadius: 10,
         paddingHorizontal: 10,

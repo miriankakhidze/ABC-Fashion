@@ -17,15 +17,11 @@ export default CardList
 const styles = StyleSheet.create({
     container: {
         width: "100%",
-
         backgroundColor: '#fff',
         borderRadius: 10,
-
         paddingHorizontal: 15,
         paddingVertical: 8,
-
         marginVertical: 8,
-
         shadowColor: "#ececec",
         shadowOpacity: 0.10,
         shadowRadius: 5,

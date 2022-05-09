@@ -25,7 +25,7 @@ const DATA = [
 const Screen = Dimensions.get('window');
 
 const ProductItem = ({
-    img, title, price, rating
+    img, title, price,
 }: any) => {
     return (
         <TouchableOpacity style={styles.item}>
@@ -48,12 +48,10 @@ const Products = () => {
             }}
             horizontal
             showsVerticalScrollIndicator={false}
-            // numColumns={3}
             data={DATA}
             renderItem={({ item }) => <ProductItem {...item} />}
             keyExtractor={(item) => item.img}
         />
-
     )
 }
 
@@ -64,7 +62,8 @@ const styles = StyleSheet.create({
         borderRadius: 15,
         marginHorizontal: 8,
         marginVertical: 8,
-        padding: 25
+        paddingHorizontal: 8,
+        paddingVertical: 10,
     },
     image: {
         flex: 1,

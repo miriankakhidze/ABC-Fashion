@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
-import React from 'react'
-import { View, Text, StyleSheet, Dimensions, FlatList } from 'react-native'
+import React from 'react';
+import { StyleSheet, Text, View } from 'react-native';
 import { CartList } from '../../components';
 import Button from '../../components/Button/Button';
 import { CartScreenProp } from './CartScreen.types';
@@ -40,7 +40,6 @@ const CartScreen = () => {
             <View style={{
                 flex: 5,
                 width: '100%',
-                // marginTop: 10,
             }}>
                 <CartList data={list} />
             </View>
@@ -49,7 +48,6 @@ const CartScreen = () => {
                 flex: 1,
                 borderTopWidth: 1,
                 borderTopColor: '#e6e6e6',
-                // width: "100%",
                 flexDirection: "row",
                 justifyContent: "space-around",
             }}>
@@ -91,7 +89,6 @@ const styles = StyleSheet.create({
         fontSize: 26,
         fontWeight: 'bold',
         marginVertical: 10,
-        // marginHorizontal: 25,
         color: "#515c6f",
     }
 })

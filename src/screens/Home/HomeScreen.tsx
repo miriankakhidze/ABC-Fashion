@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react';
-import { Button, ScrollView, Text, View } from 'react-native';
+import { ScrollView, View } from 'react-native';
 import Categories from './Categories';
 import { HomeScreenProp } from './HomeScreen.types';
 import Latest from './Latest';
@@ -12,11 +12,9 @@ const HomeScreen = () => {
     return (
         <View style={{
             flex: 1,
-            // marginHorizontal: 15,
+            backgroundColor: '#F5F6F8'
         }}>
-            <ScrollView style={{
-                // paddingLeft: 15
-            }}>
+            <ScrollView>
                 <Categories />
                 <Latest />
                 <Products />

@@ -6,7 +6,6 @@ import Button from '../../components/Button/Button';
 import { Colors } from '../../constants/Colors';
 import { ProfileScreenProp } from './ProfileScreen.types';
 
-
 const menu1 = [
     {
         icon: 'list-outline',
@@ -92,10 +91,4 @@ const styles = StyleSheet.create({
         height: 100,
         borderRadius: 50,
     }
-    // header: {
-    //     fontSize: 26,
-    //     fontWeight: 'bold',
-    //     marginVertical: 10,
-    //     color: "#515c6f",
-    // }
 })

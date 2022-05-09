@@ -39,7 +39,6 @@ const styles = StyleSheet.create({
         marginVertical: 10
     },
     image: {
-        // flex: 2,
         width: 100,
         height: 100,
         borderRadius: 50,
@@ -47,14 +46,11 @@ const styles = StyleSheet.create({
     description: {
         marginLeft: 20,
         width: '100%',
-        // backgroundColor: "red",
-        // flex: 4,
         flexDirection: "column",
         borderBottomColor: "#e5e5e9",
         paddingVertical: 15,
     },
     buttonsContainer: {
-        // flex: 1,
         width: 80,
         flexDirection: "row",
         justifyContent: "space-between",

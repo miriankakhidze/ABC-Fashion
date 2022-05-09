@@ -21,7 +21,6 @@ export default Input
 
 const styles = StyleSheet.create({
     container: {
-        // felx: 1,
         flexDirection: "row",
         justifyContent: "flex-start",
         marginVertical: 8

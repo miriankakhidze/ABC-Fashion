@@ -1,5 +1,5 @@
-import React from 'react'
-import { Dimensions, FlatList, Image, ImageBackground, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import React from 'react';
+import { Dimensions, FlatList, ImageBackground, StyleSheet, Text, View } from 'react-native';
 import Button from '../../components/Button/Button';
 
 const DATA = [
@@ -58,7 +58,6 @@ const Latest = () => {
 
 const styles = StyleSheet.create({
     container: {
-        // flex: 1,
         flexDirection: 'row',
         justifyContent: 'flex-start',
         alignItems: 'flex-start',
@@ -67,30 +66,23 @@ const styles = StyleSheet.create({
         fontSize: 26,
         fontWeight: 'bold',
         marginVertical: 10,
-        // marginHorizontal: 25,
         color: "#515c6f",
     },
     item: {
         width: Screen.width * 0.8,
         height: Screen.height * 0.3,
-        // backgroundColor: 'white',
-        // borderRadius: 15,
         marginHorizontal: 8,
         marginVertical: 8,
-        // padding: 25
     },
     image: {
-        // opacity: 0.8,
         borderRadius: 15,
         flex: 1,
         justifyContent: "space-between",
         paddingVertical: 30,
         paddingHorizontal: 30,
-        // alignItems: 'flex-start'
 
     },
     title: {
-        // position: 'absolute',
         color: 'white',
         fontSize: 28,
         marginTop: 10,

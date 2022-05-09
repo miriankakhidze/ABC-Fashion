@@ -16,10 +16,11 @@ const LoginScreen = () => {
     const navigation = useNavigation<authScreenProp>();
     return (
         <View style={{
-            flex: 1
+            flex: 1,
+            backgroundColor: '#F5F6F8'
         }}>
             <View style={{ marginVertical: 60, alignItems: "center" }}>
-                <Text style={{ color: Colors.secondary }}>ABC Fashion</Text>
+                <Text style={{ color: Colors.secondary, fontSize: 22 }}>ABC FASHION</Text>
             </View>
             <Card>
                 <Input label="USERNAME / EMAIL" icon={<Icon name="user" size={30} color="grey" />} />
