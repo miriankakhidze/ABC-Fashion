@@ -9,4 +9,5 @@ export type MainBottomTabParamList = {
     Cart: undefined
     Profile: undefined
     More: undefined
+    ProductScreen: undefined
 };

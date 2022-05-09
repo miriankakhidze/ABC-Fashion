@@ -1,25 +1,31 @@
-import React, { FC } from 'react'
+import React, { FC, useState } from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import IonIcon from 'react-native-vector-icons/Ionicons'
 import { CartListItemProps } from './CartList.types'
 
 const CartListItem: FC<CartListItemProps> = ({ img, title, price, index, length }) => {
+    const [quantity, setQuantity] = useState(1)
+    const handleQuantity = (value: number) => {
+        if (quantity + value >= 0)
+            setQuantity((prevState) => prevState + value)
+    }
+
     return (
         <View style={styles.container}>
             <Image style={styles.image} source={{ uri: img }} />
 
             <View style={[styles.description, { borderBottomWidth: index == length - 1 ? 0 : 1, }]}>
-                {/* <View style={{}}> */}
+
                 <Text style={{ color: '#515c72', fontSize: 16, marginBottom: 8, width: '60%' }}>{title}</Text>
-                {/* </View> */}
+
                 <Text style={{ color: '#ff6969', fontSize: 16, marginBottom: 8 }}>{price}</Text>
 
                 <View style={styles.buttonsContainer}>
-                    <TouchableOpacity style={styles.iconButton}>
+                    <TouchableOpacity style={styles.iconButton} onPress={() => handleQuantity(-1)}>
                         <IonIcon name="remove" size={16} color="grey" />
                     </TouchableOpacity>
-                    <Text>2</Text>
-                    <TouchableOpacity style={styles.iconButton}>
+                    <Text>{quantity}</Text>
+                    <TouchableOpacity style={styles.iconButton} onPress={() => handleQuantity(1)}>
                         <IonIcon name="add" size={16} color="grey" />
                     </TouchableOpacity>
                 </View>

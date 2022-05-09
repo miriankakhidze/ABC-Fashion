@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/native';
 import React from 'react'
-import { Dimensions, FlatList, Image, StyleSheet, Text, TextInput, View } from 'react-native';
+import { Dimensions, FlatList, Image, StyleSheet, Text, TextInput, TouchableOpacity, View } from 'react-native';
 import { HeaderRight } from '../../components';
 import { Colors } from '../../constants/Colors';
 import { SearchScreenProp } from './SearchScreen.types';
@@ -51,13 +51,13 @@ const ItemCard = ({
     img, title, price, rating
 }: any) => {
     return (
-        <View style={styles.item}>
+        <TouchableOpacity style={styles.item}>
             <View style={{ flexDirection: 'row' }}>
                 <Image style={styles.image} source={img} />
             </View>
             <Text style={styles.title}>{title}</Text>
             <Text style={styles.price}>{price}</Text>
-        </View>
+        </TouchableOpacity>
     )
 }
 

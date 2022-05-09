@@ -11,6 +11,7 @@ const HeaderRight: FC<HeaderRightProps> = () => {
             flexDirection: 'row',
             justifyContent: "space-around",
             alignItems: "center",
+            backgroundColor: '#F5F6F8'
         }}>
             <Badge value={5}>
                 <IonIcon.Button backgroundColor={'transparent'} name="chatbubble-outline" size={24} color="grey" onPress={() => console.log("Sdsa")} />

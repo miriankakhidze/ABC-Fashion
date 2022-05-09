@@ -35,26 +35,6 @@ const MainScreen = () => {
                 name="Search"
                 component={SearchScreen}
                 options={{
-                    // headerLeft: ({ tintColor }) => <Icon.Button
-                    //     name="left"
-                    //     backgroundColor={'transparent'}
-                    //     // selectionColor='transparent'
-                    //     underlayColor={'transparent'}
-                    //     size={24}
-                    //     color={Colors.primary}
-                    //     onPress={() => { navigation.navigate('Home' as any) }}
-                    // />,
-                    // headerRight: ({ tintColor }) => <Icon.Button
-                    //     name="filter"
-                    //     backgroundColor={'transparent'}
-                    //     // selectionColor='transparent'
-                    //     underlayColor={'transparent'}
-                    //     size={24}
-                    //     color={Colors.secondary}
-                    //     onPress={() => { navigation.navigate('Home' as any) }}
-                    // />,
-                    // headerTitleAlign: 'center',
-                    // headerTitle: () => <TextInput style={{ backgroundColor: 'grey', width: "100%" }} />,
                     headerShown: false,
                     tabBarStyle: { display: 'none' },
                     tabBarActiveTintColor: Colors.tabBarActiveTintColor,
@@ -72,7 +52,6 @@ const MainScreen = () => {
                     headerLeft: ({ tintColor }) => <Icon.Button
                         name="left"
                         backgroundColor={'transparent'}
-                        // selectionColor='transparent'
                         underlayColor={'transparent'}
                         size={24}
                         color={Colors.primary}
