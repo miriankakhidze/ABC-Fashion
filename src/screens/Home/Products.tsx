@@ -1,5 +1,6 @@
 import React from 'react'
 import { Dimensions, FlatList, Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
+import { Colors } from '../../constants/Colors';
 
 
 const DATA = [
@@ -73,12 +74,14 @@ const styles = StyleSheet.create({
     },
     title: {
         marginTop: 10,
-        fontSize: 12
+        fontSize: 12,
+        color: Colors.secondary
     },
     price: {
         fontSize: 15,
         marginTop: 5,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: Colors.secondary
     }
 })
 export default Products

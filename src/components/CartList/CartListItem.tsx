@@ -1,6 +1,7 @@
 import React, { FC, useState } from 'react'
 import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native'
 import IonIcon from 'react-native-vector-icons/Ionicons'
+import { Colors } from '../../constants/Colors'
 import { CartListItemProps } from './CartList.types'
 
 const CartListItem: FC<CartListItemProps> = ({ img, title, price, index, length }) => {
@@ -24,7 +25,7 @@ const CartListItem: FC<CartListItemProps> = ({ img, title, price, index, length 
                     <TouchableOpacity style={styles.iconButton} onPress={() => handleQuantity(-1)}>
                         <IonIcon name="remove" size={16} color="grey" />
                     </TouchableOpacity>
-                    <Text>{quantity}</Text>
+                    <Text style={{ color: Colors.secondary }}>{quantity}</Text>
                     <TouchableOpacity style={styles.iconButton} onPress={() => handleQuantity(1)}>
                         <IonIcon name="add" size={16} color="grey" />
                     </TouchableOpacity>

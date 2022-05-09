@@ -1,5 +1,6 @@
 import React from 'react'
 import { View, Text, TouchableOpacity, StyleSheet } from 'react-native'
+import { Colors } from '../../constants/Colors'
 
 const Categories = () => {
     return (
@@ -11,22 +12,22 @@ const Categories = () => {
                 <View style={styles.item}>
                     <TouchableOpacity style={[styles.circle, { backgroundColor: 'red' }]}>
                     </TouchableOpacity>
-                    <Text>Apparel</Text>
+                    <Text style={{ color: Colors.secondary }}>Apparel</Text>
                 </View>
                 <View style={styles.item}>
                     <TouchableOpacity style={[styles.circle, { backgroundColor: 'blue' }]}>
                     </TouchableOpacity>
-                    <Text>Beauty</Text>
+                    <Text style={{ color: Colors.secondary }}>Beauty</Text>
                 </View>
                 <View style={styles.item}>
                     <TouchableOpacity style={[styles.circle, { backgroundColor: 'green' }]}>
                     </TouchableOpacity>
-                    <Text>Shoes</Text>
+                    <Text style={{ color: Colors.secondary }}>Shoes</Text>
                 </View>
                 <View style={styles.item}>
                     <TouchableOpacity style={[styles.circle, { backgroundColor: 'white' }]}>
                     </TouchableOpacity>
-                    <Text>See All</Text>
+                    <Text style={{ color: Colors.secondary }}>See All</Text>
                 </View>
 
             </View>

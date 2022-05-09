@@ -114,7 +114,7 @@ const SearchScreen = () => {
                     showsHorizontalScrollIndicator={false}
                     horizontal
                     data={['best match', 'top rated', 'price low-high', 'price high-low']}
-                    renderItem={({ item, index }) => <Text style={{ fontSize: 14, textTransform: 'uppercase', marginHorizontal: 8 }}>{item}</Text>}
+                    renderItem={({ item, index }) => <Text style={{ fontSize: 14, textTransform: 'uppercase', marginHorizontal: 8, color: Colors.secondary }}>{item}</Text>}
                 />
             </View>
             <View>
@@ -122,7 +122,7 @@ const SearchScreen = () => {
                     contentContainerStyle={{
                         paddingBottom: 200,
                         marginTop: 15,
-                        marginHorizontal: 15,
+                        // marginHorizontal: 5,
                         alignItems: "center",
                     }}
                     numColumns={2}
@@ -142,12 +142,12 @@ const styles = StyleSheet.create({
         flex: 1,
     },
     item: {
-        width: Screen.width * 0.4,
+        width: Screen.width * 0.43,
         backgroundColor: 'white',
         borderRadius: 15,
         marginHorizontal: 8,
         marginVertical: 8,
-        padding: 25
+        padding: 15
     },
     image: {
         flex: 1,
@@ -157,11 +157,13 @@ const styles = StyleSheet.create({
     },
     title: {
         marginTop: 10,
-        fontSize: 15
+        fontSize: 15,
+        color: Colors.secondary
     },
     price: {
         fontSize: 15,
         marginTop: 5,
-        fontWeight: 'bold'
+        fontWeight: 'bold',
+        color: Colors.secondary
     }
 })

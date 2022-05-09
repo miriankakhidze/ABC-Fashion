@@ -3,6 +3,7 @@ import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { CartList } from '../../components';
 import Button from '../../components/Button/Button';
+import { Colors } from '../../constants/Colors';
 import { CartScreenProp } from './CartScreen.types';
 
 
@@ -61,7 +62,8 @@ const CartScreen = () => {
                     }}>TOTAL</Text>
                     <Text style={{
                         fontSize: 18,
-                        fontWeight: "bold"
+                        fontWeight: "bold",
+                        color: Colors.secondary
                     }}>$24.99</Text>
                     <Text style={{
                         fontSize: 12,
